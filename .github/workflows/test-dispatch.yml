@@ -1,10 +1,7 @@
-name: Test Workflow 
-on: workdispatch
-inputs:
-  testing:
-      type: bool
-      default: false
-	matrix.:test:
-      uses: ["la{lif}oversion"]
-    name: Test Workflow
-    type: none
+name: Test Workflow
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello"
